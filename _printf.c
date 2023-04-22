@@ -8,10 +8,10 @@
 */
 int _printf(const char *format, ...)
 {
-int ret;
+int sm;
 va_list args;
 va_start(args, format);
-ret = vfprintf(stdout, format, args);
+sm = vfprintf(stdout, format, args);
 va_end(args);
-return (ret);
+return (sm);
 }
