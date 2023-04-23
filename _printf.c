@@ -24,8 +24,10 @@ count++;
 break;
 case 's':
 for (s = va_arg(args, char *); *s; s++)
+{
 putchar(*s);
 count++;
+}
 break;
 case '%':
 putchar('%');
