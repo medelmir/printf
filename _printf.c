@@ -10,15 +10,9 @@
 int _printf(const char *format, ...)
 {
 int ret;
-char buffer[1024];
-va_list args;
-va_start(args, format);
-if (format == NULL)
-return (-1);
-else
-{
-vsprintf(buffer, format, args);
-ret = fputs(buffer, stdout);
-va_end(args);
+va_list ap;
+va_start(ap, format);
+ret = vfprintf(stdout, format, ap);
+va_end(ap);
 return (ret);
 }
