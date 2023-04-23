@@ -9,12 +9,16 @@
  */
 int _printf(const char *format, ...)
 {
-int ret = 0;
+int ret;
 char buffer[1024];
 va_list args;
 va_start(args, format);
-ret = vsprintf(buffer, format, args);
+if (format == NULL)
+return (-1);
+else
+{
+vsprintf(buffer, format, args);
+ret = fputs(buffer, stdout);
 va_end(args);
-fputs(buffer, stdout);
 return (ret);
 }
