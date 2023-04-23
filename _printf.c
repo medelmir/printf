@@ -13,8 +13,12 @@ int count  = 0;
 char *s;
 va_list args;
 va_start(args, format);
+if (format == NULL)
+return (-1);
 for (; *format; format++)
 {
+if (*format == '%' && *++format == '\0')
+return (-1);
 if (*format == '%')
 switch (*++format)
 {
