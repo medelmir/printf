@@ -33,8 +33,10 @@ count++;
 break;
 }
 else
+{
 putchar(*format);
 count++;
+}
 }
 va_end(args);
 return (count);
