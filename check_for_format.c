@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * check_for_format - checks format if belongs to a special char to be printed.

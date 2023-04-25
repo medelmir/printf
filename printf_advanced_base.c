@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * print_bin - takes an unsigned int and sees if prints it as binary.
