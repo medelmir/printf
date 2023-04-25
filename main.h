@@ -52,6 +52,4 @@ void print_UHEX(va_list *, int, int *count);
 void p_UHEX(unsigned int, int *);
 void print_pointer(va_list *, int, int *count);
 void p_ptr(char *, int *);
-
-#endif 
-
+#endif
